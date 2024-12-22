@@ -53,6 +53,7 @@
 // console.log("Max: " + Math.max(4, 6, -8, 2, 67, 5, 8))
 
 
+
 // lesson_5
 
 // var number = 15;
@@ -69,18 +70,30 @@
 //   console.log("False");
 // }
 
-var str = "word";
+// var str = "word";
 
-switch(str) {
-  case "4":
-    console.log("Значення змінної = 4");
-    break;
-  case "45":
-    console.log("Значення змінної = 45");
-    break;
-  case "word":
-    console.log("Значення змінної = <word>");
-    break;
-  default:
-    console.log("Default");
-  }
+// switch(str) {
+//   case "4":
+//     console.log("Значення змінної = 4");
+//     break;
+//   case "45":
+//     console.log("Значення змінної = 45");
+//     break;
+//   case "word":
+//     console.log("Значення змінної = <word>");
+//     break;
+//   default:
+//     console.log("Default");
+//   }
+
+
+// lesson_6
+
+// var arr = new Array();
+// var arr = [5, true, 'str', 5.7, -100];
+// arr[3] = 'word';
+// console.log(arr.length);
+
+var matrix = [[4, 6, 8], [5.7, true, 'str'], [0, -100]];
+ matrix[1][2] = "word";
+ console.log(matrix);
