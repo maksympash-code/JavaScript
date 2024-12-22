@@ -141,7 +141,7 @@
 // }
 
 
-// lesson_7
+// lesson_8
 
 // alert("Яка хороша погода!");
 
@@ -155,10 +155,52 @@
 //   alert("Ви повноліnній!");
 // }
 
-var person = null;
-if (confirm("Ви точно впевнені?")){
-  person = prompt("Введіть ваше і'мя")
-  alert("Hello, " + person);
-} else {
-  alert("Ви натиснули 'відміна'");
+// var person = null;
+// if (confirm("Ви точно впевнені?")){
+//   person = prompt("Введіть ваше і'мя")
+//   alert("Hello, " + person);
+// } else {
+//   alert("Ви натиснули 'відміна'");
+// }
+
+
+// lesson_9
+
+// function info(words) {
+//   console.log("Result: " + words);
+// }
+
+// function sum(a, b) {
+//   var res = a + b;
+//   info(res);
+// }
+
+// sum(5, -7)
+
+// function sum_arr(arr) {
+//   var sum = 0;
+//   for (var i = 0; i < arr.length; i++) {
+//     sum += arr[i];
+//   }
+//   return sum;
+// }
+
+// var arr_1 = [1, 2, 3, 4, 5, 6, 7];
+// var arr_2 = [1, 2, 3, 4, 5, 6, 8];
+// var arr_3 = [1, 2, 3, 4, 5, 6, 90];
+
+// var res = sum_arr(arr_1);
+// info(res);
+// // sum_arr(arr_2);
+// // sum_arr(arr_3);
+
+var num = 10; // global
+
+function info() {
+  var num = 20; // local
+  console.log(num);
 }
+
+info();
+
+console.log(num);
