@@ -94,6 +94,48 @@
 // arr[3] = 'word';
 // console.log(arr.length);
 
-var matrix = [[4, 6, 8], [5.7, true, 'str'], [0, -100]];
- matrix[1][2] = "word";
- console.log(matrix);
+// var matrix = [[4, 6, 8], [5.7, true, 'str'], [0, -100]];
+//  matrix[1][2] = "word";
+//  console.log(matrix);
+
+
+// lesson_7
+
+// for(var i = 100; i > 5; i /= 2){
+//   console.log(i);
+// }
+
+// var j = 1000;
+// while(j >= 100) {
+//   console.log(j);
+//   j -= 100;
+// }
+
+// var IsHasCar = true;
+// while(isHasCar) {
+
+// }
+
+// var x = 0;
+// do {
+//   console.log(x)
+//   x++;
+// } while(x < 10);
+
+// for(var i = 10; i <= 20; i += 2){
+//   if (i > 15)
+//     break;
+//   console.log(i);
+// }
+
+// for(var i = 10; i <= 20; i++){
+//   if (i % 2 == 0)
+//     continue;
+//   console.log(i);
+// }
+
+var arr = [4, 2, 6, 25, -1]
+for (var i = 0; i < arr.length; i++) {
+  arr[i] *= 2;
+  console.log("Елемент " + (i + 1) + ": " + arr[i]);
+}
