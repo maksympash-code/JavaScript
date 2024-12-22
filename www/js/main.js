@@ -134,8 +134,31 @@
 //   console.log(i);
 // }
 
-var arr = [4, 2, 6, 25, -1]
-for (var i = 0; i < arr.length; i++) {
-  arr[i] *= 2;
-  console.log("Елемент " + (i + 1) + ": " + arr[i]);
+// var arr = [4, 2, 6, 25, -1]
+// for (var i = 0; i < arr.length; i++) {
+//   arr[i] *= 2;
+//   console.log("Елемент " + (i + 1) + ": " + arr[i]);
+// }
+
+
+// lesson_7
+
+// alert("Яка хороша погода!");
+
+// var data = confirm("Ви зараз вдома?");
+// if (data){
+//   alert("Ви молодець!");
+// }
+
+// var data = prompt("Cкільки вам років?");
+// if (data >= 18){
+//   alert("Ви повноліnній!");
+// }
+
+var person = null;
+if (confirm("Ви точно впевнені?")){
+  person = prompt("Введіть ваше і'мя")
+  alert("Hello, " + person);
+} else {
+  alert("Ви натиснули 'відміна'");
 }
