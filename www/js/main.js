@@ -194,13 +194,33 @@
 // // sum_arr(arr_2);
 // // sum_arr(arr_3);
 
-var num = 10; // global
+// var num = 10; // global
 
-function info() {
-  var num = 20; // local
-  console.log(num);
+// function info() {
+//   var num = 20; // local
+//   console.log(num);
+// }
+
+// info(); 
+
+// console.log(num);
+
+
+// lesson_10
+
+var counter = 0;
+
+function onClickButton(el) {
+  counter++;
+  el.innerHTML = "Ви натиснули на кнопку: " + counter;
+  el.style.background = "red";
+  el.style.color = "white";
+
+  el.style.cssText = "border-radius: 5px; border: 0; font-size: 20px"
 }
 
-info();
-
-console.log(num);
+function onInput(el) {
+  if (el.value == "Hello")
+    alert("І тобі привіт!")
+  console.log(el.value);
+}
