@@ -6,9 +6,27 @@
   <title>Вивчення JavaScript</title>
 </head>
 <body>
-  <button name="main_button" onclick="onClickButton(this)">Натисни на мене</button>
-  
-  <input oninput="onInput(this)">
+  <form id="main-form" method="post">
+    <label for="name">Ім'я:</label>
+    <input type="text" name="name" placeholder="Ваше ім'я" id="name"><br><br>
+    <lable for="password">Пароль:</lable>
+    <input type="password" name="pass" placeholder="Введіть пароль" id="pass"><br><br>
+    <lable for="repass">Перевірка паролю:</lable>
+    <input type="password" name="repass" placeholder="Перевірка паролю" id="repass"><br><br>
+    <span>Стать:</span>
+    <input type="radio" name="state" id="male" value="Чоловіча">
+    <label for="male">Чоловіча</label>
+    <input type="radio" name="state" id="female", value="Жіноча">
+    <label for="female">Жіноча</label><br><br>
+    <div id="error" style="color: red" ></div>
+    <input type="submit" name="submit" value="Готово">
+  </form>
+  <!-- <p id="text" title="Простий текст">Text</p>
+
+  <span class="simple-text">Text 1</span>
+  <span class="simple-text">Text 2</span>
+  <span class="simple-text">Text 3</span> -->
+
   <script src="js/main.js"></script>
 </body>
 </html>

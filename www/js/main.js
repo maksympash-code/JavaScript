@@ -208,19 +208,80 @@
 
 // lesson_10
 
-var counter = 0;
+// var counter = 0;
 
-function onClickButton(el) {
-  counter++;
-  el.innerHTML = "Ви натиснули на кнопку: " + counter;
-  el.style.background = "red";
-  el.style.color = "white";
+// function onClickButton(el) {
+//   counter++;
+//   el.innerHTML = "Ви натиснули на кнопку: " + counter;
+//   el.style.background = "red";
+//   el.style.color = "white";
 
-  el.style.cssText = "border-radius: 5px; border: 0; font-size: 20px"
-}
+//   el.style.cssText = "border-radius: 5px; border: 0; font-size: 20px"
+// }
 
-function onInput(el) {
-  if (el.value == "Hello")
-    alert("І тобі привіт!")
-  console.log(el.value);
+// function onInput(el) {
+//   if (el.value == "Hello")
+//     alert("І тобі привіт!")
+//   console.log(el.value);
+// }
+
+
+// lesson_11
+
+// var text = document.getElementById('text');
+// text.title = "New text";
+// console.log(text.title);
+
+// text.style.color = "white";
+// text.style.backgroundColor = "red";
+
+// text.innerHTML = "New<br>string";
+
+// document.getElementById('text').style.color = "black";
+
+// var spans = document.getElementsByTagName('span');
+// for (var i = 0; i < spans.length; i++) { вибираємо елементи по тегу
+//   console.log(spans[i].innerHTML);
+// }
+
+// var spans = document.getElementsByClassName('simple-text');
+// for (var i = 0; i < spans.length; i++) { // вибираємо елементи по тегу
+//   console.log(spans[i].innerHTML);
+// }
+
+document.getElementById("main-form").addEventListener("submit", checkForm);
+
+function checkForm(event) {
+  event.preventDefault();
+  var el = document.getElementById("main-form");
+
+  var name = el.name.value;
+  var pass = el.pass.value;
+  var repass = el.repass.value;
+  var state = el.state.value;
+
+  var fail = ""
+
+  if (name == "" || pass =="" || state == "") {
+    fail = "Заповніть усі поля";
+  } 
+  else if (name.length <= 5 || name.length > 15){
+    fail = "Введіть коректне ім'я(від 5 до 15 символів)";
+  }
+  else if (pass != repass) {
+    fail = "Паролі повинні співпадати";
+  }
+  else if (pass.split("&").lenght > 1) {
+    fail = "Некоректний пароль";
+  }
+
+
+
+  if (fail != "") {
+      document.getElementById("error").innerHTML = fail;
+  } 
+  else {
+    alert("Форма заповнена успішно");
+    window.location = 'https://www.youtube.com';
+  }
 }
