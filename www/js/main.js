@@ -249,39 +249,65 @@
 //   console.log(spans[i].innerHTML);
 // }
 
-document.getElementById("main-form").addEventListener("submit", checkForm);
+// document.getElementById("main-form").addEventListener("submit", checkForm);
 
-function checkForm(event) {
-  event.preventDefault();
-  var el = document.getElementById("main-form");
+// function checkForm(event) {
+//   event.preventDefault();
+//   var el = document.getElementById("main-form");
 
-  var name = el.name.value;
-  var pass = el.pass.value;
-  var repass = el.repass.value;
-  var state = el.state.value;
+//   var name = el.name.value;
+//   var pass = el.pass.value;
+//   var repass = el.repass.value;
+//   var state = el.state.value;
 
-  var fail = ""
+//   var fail = ""
 
-  if (name == "" || pass =="" || state == "") {
-    fail = "Заповніть усі поля";
-  } 
-  else if (name.length <= 5 || name.length > 15){
-    fail = "Введіть коректне ім'я(від 5 до 15 символів)";
-  }
-  else if (pass != repass) {
-    fail = "Паролі повинні співпадати";
-  }
-  else if (pass.split("&").lenght > 1) {
-    fail = "Некоректний пароль";
-  }
+//   if (name == "" || pass =="" || state == "") {
+//     fail = "Заповніть усі поля";
+//   } 
+//   else if (name.length <= 5 || name.length > 15){
+//     fail = "Введіть коректне ім'я(від 5 до 15 символів)";
+//   }
+//   else if (pass != repass) {
+//     fail = "Паролі повинні співпадати";
+//   }
+//   else if (pass.split("&").lenght > 1) {
+//     fail = "Некоректний пароль";
+//   }
 
 
 
-  if (fail != "") {
-      document.getElementById("error").innerHTML = fail;
-  } 
-  else {
-    alert("Форма заповнена успішно");
-    window.location = 'https://www.youtube.com';
-  }
+//   if (fail != "") {
+//       document.getElementById("error").innerHTML = fail;
+//   } 
+//   else {
+//     alert("Форма заповнена успішно");
+//     window.location = 'https://www.youtube.com';
+//   }
+// }
+
+
+// lesson_12
+
+// var counter = 0;
+// var id = setInterval(my_func, 1000);
+
+// function my_func() {
+//   counter++;
+//   console.log("Пройшло секунд: " + counter)
+
+//   if (counter == 5)
+//     clearInterval(id)
+// }
+
+// setInterval(function my_func() {
+//   counter++;
+//   console.log("Пройшло секунд: " + counter)
+// }, 1000);
+
+
+setTimeout(my_func, 2000);
+
+function my_func(){
+  console.log("Timer is working");
 }
