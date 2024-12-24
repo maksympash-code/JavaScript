@@ -306,8 +306,48 @@
 // }, 1000);
 
 
-setTimeout(my_func, 2000);
+// setTimeout(my_func, 2000);
 
-function my_func(){
-  console.log("Timer is working");
+// function my_func(){
+//   console.log("Timer is working");
+// }
+
+
+// lesson_13
+
+// var date = new Date();
+
+// console.log(date.getFullYear());
+// console.log(date.getMonth() + 1)
+// console.log("Час: " + date.getHours() + ":" + date.getMinutes())
+
+// var arr = [5, 90, 32, 7, 8, 9];
+// console.log(arr.length);
+// console.log(arr.sort());
+// console.log(arr.join(", "));
+
+// var str = arr.reverse().join(", ");
+
+// console.log(str.split(", "));
+
+class Person {
+  constructor(name, age, happiness){
+    this.name = name;
+    this.age = age;
+    this.happiness = happiness;
+  }
+
+   info(){
+    console.log("Name: " + this.name)
+    console.log("Age: " + this.age)
+    console.log("Happiness: " + this.happiness)
+  }
 }
+
+var alex = new Person('Alex', 45, true);
+var bob = new Person('Bob', 25, false);
+
+alex.name = 'alex2';
+
+alex.info();
+bob.info();
